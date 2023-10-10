@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class ClickPictureTest {
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
     public static void setup(){

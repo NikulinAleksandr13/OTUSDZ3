@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SearchResultTest {
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
     public static void setup(){
@@ -29,7 +29,7 @@ public class SearchResultTest {
         searchBar.sendKeys("ОТУС");
         WebElement searchButton = driver.findElement(By.cssSelector(".searchbox_searchButton__F5Bwq.iconButton_button__6x_9C"));
         searchButton.click();
-        WebElement firstResult = driver.findElement(By.xpath("//h2[@class = 'LnpumSThxEWMIsDdAT17 CXMyPcQ6nDv47DKFeywM'][1]"));
+        WebElement firstResult = driver.findElement(By.xpath("//span[contains(text(),'Онлайн‑курсы для профессионалов, дистанционное обучение современным ...')]"));
         String actualTitle = firstResult.getText();
         String expectedTitle = "Онлайн‑курсы для профессионалов, дистанционное обучение современным ...";
         Assertions.assertEquals(expectedTitle,actualTitle);

@@ -12,8 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AutorizationTest {
-    WebDriver driver;
-        Logger logger = LogManager.getLogger(AutorizationTest.class);
+    private WebDriver driver;
+       private Logger logger = LogManager.getLogger(AutorizationTest.class);
 
 
     @BeforeAll
